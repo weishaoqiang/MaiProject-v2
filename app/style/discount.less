@@ -1,0 +1,245 @@
+/* 详情页 */
+@base: #ff841d;
+body {
+    background-color: #f1f1f1;
+    .head {
+        height: 50px;
+        width: 100%;
+        background: #f4483e;
+        position: relative;
+        text-align: center;
+        line-height: 50px;
+        > h3 {
+            background-color: #f4483e;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+        .back {
+            position: absolute;
+            width: 50px;
+            height: 46px;
+            top: 2px;
+            left: 2px;
+            >a{
+                width: 50px;
+                height: 46px;
+                line-height: 46px;
+                display: block;
+            }
+            .icon-font-back {
+                &:before {
+                    content:"\e660";
+                    width: 100%;
+                    height: 100%;
+                    font-size: 20px;
+                    text-align: center;
+                    color: #fff;
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                }
+            }
+        }
+        .appdown {
+            position: absolute;
+            width: 50px;
+            height: 46px;
+            top: 2px;
+            right: 2px;
+            >a{
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: url('../img/header_app.png') no-repeat center center;
+                background-size: 36px 36px;
+            }
+        }
+    }
+    .details {
+        width: 100%;
+        .content {
+            width: 100%;
+            padding: 5px  10px;
+            background-color: #fff;
+            overflow: hidden;
+            .title {
+                padding: 10px 0 5px;
+                font-size: 18px;
+                color: #444;
+            }
+            .price {
+                font-size: 14px;
+                font-weight: 700;
+                color: @base;
+            }
+            .info {
+                padding: 10px 0;
+                color: #999;
+                font-size: 13px;
+                > span {
+                    padding: 0 5px;
+                }
+            }
+            .dec {
+                width: 100%;
+                padding: 5px;
+                .imgS{
+                    >img{
+                        width: 120px;
+                        height: 120px;
+                        display: block;
+                    }
+                }
+                .decInfo{
+                    line-height: 1.5;
+                    margin: 10px 0;
+                    font-size: 16px;
+                    color: #606060;
+                }
+                .imgB {
+                    width: 100%;
+                    >img{
+                        vertical-align: top;
+                    }
+                }
+            }
+            .button {
+                display: block;
+                width: 90%;
+                height: 30px;
+                line-height: 30px;
+                margin: 15px auto;
+                text-align: center;
+                border-radius: 4px;
+                background-color: @base;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 600;
+            }
+            .City {
+                width: 150px;
+                margin: 0 auto;
+                box-shadow: 2px 2px 6px #ccc,-2px -2px 6px #ccc;
+                #disstorck {
+                    width: 100%;
+                    bordor: 1px solid #ccc;
+                    li{
+                        height: 30px;
+                        line-height: 30px;
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 30px;
+                            >span{
+                                width: 80%;
+                                margin: auto;
+                                border-bottom:1px dashed #ccc;
+                                display: block;
+                                height: 30px;
+                                text-indent: 0px;
+                                strong{
+                                    text-align: right;
+                                    display: block;
+                                    width: 50%;
+                                    float: right;
+                                    color: @base;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .weixin {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #fff;
+            >img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .commemt{
+            width: 100%;
+            padding: 10px 0;
+            .tit {
+            width: 100%;
+            height: 36px;
+            background-color: #fff;
+            line-height: 24px;
+            font-size: 16px;
+            text-align: left;
+            padding: 6px 8px 0;
+            }
+            .reply{
+                background-color: #fff;
+                width: 100%;
+                padding: 0 8px;
+                .form{
+                    width: 100%;
+                    border-radius: 3px;
+                    border: 1px solid #ccc;
+                    textarea{
+                        width: 100%;
+                        height: 68px;
+                        border: 0 none;
+                    }
+                    .ctrl {
+                        background-color: #f9f9f9;
+                        height: 37px;
+                        width: 100%;
+                        > input {
+                            height: 39px;
+                            width: 100px;
+                            color: #fff;
+                            background-color: @base;
+                            float: right;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .list{
+                width: 100%;
+                >ul {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        padding: 18px 10px;
+                        .userimg{
+                            float: left;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            >img{
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                        .con{
+                            padding-left: 5px;
+                            overflow: hidden;
+                            > .name{
+                                margin-bottom: 5px;
+                                >.username {
+                                    color:#5997c0;
+                                    float: left;
+                                }
+                                >.time {
+                                    float: right;
+                                }
+                            }
+                            > .content{
+                                padding: 0;
+                                font-size: 15px;
+                                color: #909090;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

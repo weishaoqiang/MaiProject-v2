@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣详情页</title>
+    <link rel="stylesheet" href="./style/commom.css">
+    <link rel="stylesheet/less" href="style/discount.less">
+    <script src="./lib/less.js"></script>
+    <script src="./lib/zepto.js"></script>
+    <script src="./lib/template-native.js"></script>
+    <script src="./lib/package.js"></script>
+    <script src="./js/discount.js"></script>
+</head>
+<body>
+    <script type="text/template" id="moneyCtrlcontentTemp">
+        <div class="content">
+            <h3 class="title"><%=result[0]['productName']%></h3>
+            <%if(result[0]['productPrice']){%>
+                <p class="price"><%=result[0]['productPrice']%></p>
+            <%}%>
+            <%if(result[0]['productPinkage']){%>
+                <p class="price"><%=result[0]['productPinkage']%></p>
+            <%}%>
+            <div class="info">
+                <span><%=result[0]['productFrom']%></span>
+                <span><%=result[0]['productTime']%></span>
+                <span><%=result[0]['productTips']%></span>
+            </div>
+            <div class="dec">
+                <%if(result[0]['productImgSm']){%>
+                    <div class="imgS fr"><%=#result[0]['productImgSm']%></div>
+                <%}%>
+                <%if(result[0]['productImg']){%>
+                    <div class="imgS fr"><%=#result[0]['productImg']%></div>
+                <%}%>
+                <%if(result[0]['productInfo']){%>
+                    <p class="decInfo"><%=result[0]['productInfo']%></p>
+                <%}%>
+                <%if(result[0]['productInfo1']){%>
+                    <p class="decInfo"><%=result[0]['productInfo1']%></p>
+                <%}%>
+                <%if(result[0]['productInfo2']){%>
+                    <p class="decInfo"><%=result[0]['productInfo2']%></p>
+                <%}%>
+            </div>
+            <%if(result[0]['productImg']){%>
+                <div class="imgB"><%=#result[0]['productImg']%></div>
+            <%}%>
+            <%if(result[0]['productImgLg']){%>
+                <div class="imgB"><%=#result[0]['productImgLg']%></div>
+            <%}%>
+            <%if(result[0]['productCity']){%>
+                <div class="City">
+                    <%=#result[0]['productCity']%>
+                </div>
+            <%}%>
+            <a class="button" href="javascript:;">前往购买</a>
+        </div>
+        <div class="weixin">
+            <img src="./img/mmbweixin2.png"/>
+        </div>
+        <%if(result[0]['productComment']){%>
+            <div class="commemt"><%=#result[0]['productComment']%></div>
+        <%}%>
+    </script>
+    <div class="head">
+        <div class="back"><a class="icon-font icon-font-back" href="javascript:;"></a></div>
+        <h3>国内折扣</h3>
+        <div class="appdown"><a href="javascript:;"></a></div>
+    </div>
+    <div class="details">
+        <div class="content">
+            <h3 class="title">西域美农新疆特产五星和田红枣250g*2</h3>
+            <p class="price">19.8元(5件99元)</p>
+            <div class="info"><span>京东商城</span><span>10-22 13:28</span><span>chenjin / 慢慢买</span></div>
+            <div class="dec">
+                <div class="imgS fr"><img src="./img/dengzi.jpg" alt=""/></div>
+                <p class="decInfo">原价25.9一斤，凑满5件只要99元价格。 枣子紧实，入口甜爽。适合公司人多的买吧，价格还是不错的。              </p>
+            </div>
+            <div class="imgB"><img src="./img/detail.jpg" alt=""/></div>
+            <a class="button" href="javascript:;">前往购买</a>
+        </div>
+        <div class="weixin">
+            <img src="./img/mmbweixin2.png"/>
+        </div>
+        <div class="commemt">
+            <div class="tit">发表评论</div>
+                <div class="reply">
+                    <div class="form">
+                        <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                        <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友58***74" type="hidden">
+                        <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="西域美农新疆特产五星和田红枣250g*2" type="hidden">
+                        <div class="ctrl">
+                            <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                        </div>
+                    </div>
+                </div>
+            <div class="tit" id="newcomment">最新评论</div>
+            <div class="list">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="login">
+            <a href="coupon-login.html">登陆</a>
+            <a href="coupon-register.html">注册</a>
+            <a href="#"><img width="13px" src="images/top.jpg" alt=""/>返回顶部</a>
+        </div>
+        <div class="copyright">
+            <a href="#">手机APP下载 </a>
+            <a href="#">慢慢买手机版 </a>
+            <span>-- 掌上比价平台</span>
+
+            <p><a href="javascript:;">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

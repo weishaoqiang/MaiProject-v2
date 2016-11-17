@@ -1,0 +1,111 @@
+/*搜索栏start*/
+.from_search {
+    height: 50px;
+    padding: 10px;
+    padding-right: 70px;
+    padding-top: 10px;
+    position: relative;
+
+}
+
+.from_search input:nth-of-type(2) {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 63px;
+    height: 30px;
+    background: #ff841d;
+    color: white;
+    line-height: 20px;
+    border-radius: 15px;
+}
+
+.from_search input:nth-of-type(1) {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 20px;
+}
+
+/* nav*/
+
+.nav {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    text-indent: 1em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+h2 {
+    height: 32px;
+    line-height: 32px;
+    color:#D96D00;
+    background-color: #f8f8f8;
+    text-indent: 1em;
+    border-bottom: 1px solid #ddd;
+}
+/* product list--------*/
+.productlist {
+    width: 100%;
+}
+.productlist li {
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid #eee;
+}
+.productlist li>.left {
+    width: 10%;
+    float: left;
+    height: 100%;
+}
+.productlist li>.left>span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #ddd;
+    margin-left: 15px;
+    margin-top: 10px;
+    text-align: center;
+    color:#fff;
+    font-size:14px;
+}
+.productlist li:nth-of-type(1)>.left>span {
+    background-color: red;
+}
+.productlist li:nth-of-type(2)>.left>span {
+    background-color: yellow;
+}
+.productlist li:nth-of-type(3)>.left>span {
+    background-color: green;
+}
+.productlist li>.right {
+    padding:3px 0 4px 0;
+    float: left;
+    width: 90%;
+    height: 100%;
+    text-indent: 1em;
+    position: relative;
+}
+.productlist li>.right::after {
+    content:'\e65f';
+    font-family: "Iconfont";
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    font-size:16px;
+}
+.productlist li>.right>.top {
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.productlist li>.right>.bottom {
+    height: 20px;
+    line-height: 20px;
+    color:#aaa;
+
+}

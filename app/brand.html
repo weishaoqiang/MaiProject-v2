@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Brand</title>
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/commom.css">
+	<link rel="stylesheet" href="style/brand.css">
+	<script src='lib/zepto.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script src="lib/package.js"></script>
+	<script type="text/template" id='brand'>
+		<% for(var i=0;i< result.length;i++){ %>
+			<li class="clearfix" data-brandTitleId='<%=result[i]["brandTitleId"]%>'>
+				<div class="left"><span><%=i+1%></span></div>
+				<div class="right">
+					<p class="top"><%=result[i]["brandName"]%></p>
+					<p class="bottom"><%=result[i]["brandInfo"]%></p>
+				</div>
+			</li>
+		<% } %>
+	</script>
+</head>
+<body>
+<!--头部-->
+<header>
+    <a class="header-left fl" href="">
+        <img height="25px" style="" src="images/header_logo.png" alt=""/>
+    </a>
+    <a class="header-right fr" href=""></a>
+</header>
+
+<!--搜索-->
+<section class="from_search">
+    <input type="text" placeholder="请输入你想要的产品">
+    <input type="button" value="搜索">
+</section>
+
+<div class="nav">
+	<a href="index.html">首页</a>
+	<span>&nbsp;&gt;&nbsp;</span>
+	<a href="brandTitle.html">全部分类</a>
+	<span>&nbsp;&gt;&nbsp;</span>
+	<a class='current' href="javascript:;"></a>
+</div>
+<h2></h2>
+<div class='productlist'>
+	<ul>
+	</ul>
+</div>
+<!--底部-->
+<footer>
+    <div class="login">
+        <a href="coupon-login.html">登陆</a>
+        <a href="coupon-register.html">注册</a>
+        <a href="#"><img width="13px" src="images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="copyright">
+        <a href="#">手机APP下载 </a>
+        <a href="#">慢慢买手机版 </a>
+        <span>-- 掌上比价平台</span>
+
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </div>
+</footer>
+<script src="js/brand.js"></script>
+</body>
+</html>

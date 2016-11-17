@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>肯德基等优惠券--慢慢买</title>
+    <link rel="shortcut icon" href="http://m.manmanbuy.com/download/images/logo.png">
+    <link rel="stylesheet" href="style/commom.css">
+    <link rel="stylesheet" href="style/coupon.css">
+</head>
+<body>
+<!--header部分-->
+<header>
+    <div class="coupon-back">
+        <a href="coupon.html" class="icon-font icon-back"></a>
+    </div>
+    <h1>棒约翰优惠券</h1>
+
+    <div class="coupon-home">
+        <a href="javascript:;">
+            <img src="img/header_app.png">
+        </a>
+    </div>
+</header>
+<!--coupon-tip部分-->
+<div class="coupon-tip">
+    --点餐前出示手机中的优惠券，即可享受优惠--
+</div>
+<!--coupon-list部分-->
+<script type="text/template" id="coupon-list">
+    <%for(var i=0;i< items.length;i++){%>
+    <li class="clearfix icon-font">
+        <div class="coupon-list-left fl">
+            <a href="javascript:;">
+                <%=#items[i].couponProductImg%>
+            </a>
+        </div>
+        <div class="coupon-list-right">
+            <p class="coupon-list-title"><%=items[i].couponProductName%></p>
+            <p class="coupon-list-price"><%=items[i].couponProductPrice%></p>
+            <p class="coupon-list-time"><%=items[i].couponProductTime%></p>
+        </div>
+        <a class="icon-font icon-next" href='javascript:;'></a>
+    </li>
+    <%}%>
+</script>
+<div class="coupon-list">
+    <ul>
+    </ul>
+</div>
+<!--上一个页面直接拷贝过来的-->
+<div class="home-menu">
+    <a href="index.html">首页&gt;</a>
+    <a href="coupon.html">优惠券</a>
+    <a href="javascript:;">&gt;肯德基优惠券</a>
+</div>
+<div class="coupon-footer-top">
+    <a href="coupon-login.html">登录</a>
+    <a href="coupon-register.html">注册</a>
+    <a href="javascript:;">
+        <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+        返回顶部
+    </a>
+</div>
+<div class="coupon-footer-bottom">
+    <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+
+    <p>http://m.manmanbuy.com/</p>
+</div>
+
+<!--遮罩层-->
+<script type="text/template" id="list-cover">
+    <%for(var i=0;i< items2.length;i++){%>
+    <li>
+        <%=#items2[i].couponProductImg%>
+    </li>
+    <%}%>
+</script>
+<div class="coupon-list-cover">
+    <ul>
+    </ul>
+</div>
+<script src="lib/template-native.js"></script>
+<script src='lib/zepto.js'></script>
+<script src='lib/fx.js'></script>
+<script src='lib/selector.js'></script>
+<script src='js/coupon-product3.js'></script>
+</body>
+</html>

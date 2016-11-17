@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="style/commom.css">
+        <link rel="stylesheet" href="style/cheaper.css">
+        <script src="lib/zepto.js"></script>
+        <script src="lib/touch.js"></script>
+        <script src="lib/template-native.js"></script>
+        <script src="js/cheaper.js"></script>
+    </head>
+    <body id="top">
+    <header>
+    <div class="coupon-back">
+        <a href="index.html" class="icon-font icon-back"></a>
+    </div>
+    <h1>白菜价-淘宝内部劵</h1>
+
+    <div class="coupon-home">
+        <a href="#">
+            <img src="img/header_app.png">
+        </a>
+    </div>
+    </header>
+    <nav>
+      <div class="search"></div>
+    	<div class="list">
+       <ul></ul>
+      </div>
+
+      <div class="hidden">
+        <div>搜索</div>
+        <form action="">
+            <input type="search" name="" id="" class="iconfont" placeholder="请输入搜索关键词">
+        </form>
+
+      </div>
+    </nav>
+    <main></main>
+    <footer>
+        <div class="login">
+            <a href="coupon-login.html">登陆</a>
+            <a href="coupon-register.html">注册</a>
+            <a href="#"><img width="13px" src="images/top.jpg" alt=""/>返回顶部</a>
+        </div>
+        <div class="copyright">
+            <a href="#">手机APP下载 </a>
+            <a href="#">慢慢买手机版 </a>
+            <span>-- 掌上比价平台</span>
+
+            <p><a href="javascript:;">m.manmanbuy.com</a></p>
+        </div>
+    </footer>
+    <script type="text/template" id="cheaperNav">
+		<% for(var i=0;i< result.length;i++){ %>
+			<li data-titleid="<%=result[i].titleId%>">
+      <%=result[i].title%>
+      </li>
+		<% } %>
+    </script>
+   <script type="text/template" id="cheaperItem">
+      <% for(var i=0;i< result.length;i++){ %>
+              <div class="item">
+                  <%=#result[i].productHref%>
+                  <%=#result[i].productImg%>
+                  <div class="name"><%=#result[i].productName%>
+
+                  <div class="price"><%=#result[i].productPrice%></div>
+                  <div class="bar clearfix">
+                      <div class="number">20%<span></span><span></span></div>
+                      <div>已领<span><%=i%></span>张</div>
+                  </div>
+                  <%=#result[i].productCoupon%>
+                  <%=#result[i].productHref%>
+                  </div>
+              </div>
+      <% } %>
+  </script>
+    </body>
+</html>

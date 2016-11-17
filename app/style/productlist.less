@@ -1,0 +1,270 @@
+//甘庆学--2016.11.6
+//定义圆角
+.rounded-corners (@radius:5px) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@color-bj: #ff841d;
+.back-bj {
+  background: @color-bj;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  font-family: arial;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background: @color-bj;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0px 12px;
+  overflow: hidden;
+
+  a:first-of-type {
+    margin-top: 13px;
+    float: left;
+    img {
+      max-height: 25px;
+      overflow: hidden;
+    }
+  }
+  a:last-of-type {
+    margin-top: 8px;
+    float: right;
+    img {
+      max-height: 34px;
+    }
+  }
+}
+
+.search {
+  height: 50px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 10px;
+  display: flex;
+  .searchtxt {
+    height: 30px;
+    float: left;
+    flex: 1;
+    padding-right: 30px;
+    padding-left: 4px;
+    input {
+      height: 100%;
+      width: 100%;
+      .rounded-corners(15px);
+      padding-left: 40px;
+      background: #f1f1f1;
+      border: 1px solid @color-bj;
+    }
+  }
+  .searchbtn {
+    width: 40px;
+    height: 30px;
+    float: right;
+    position: relative;
+    input {
+      height: 30px;
+      width: 63px;
+      position: absolute;
+      left: -23px;
+      .back-bj;
+      border: 0;
+      .rounded-corners(15px);
+      color: #fff;
+      font-size: 14px;
+    font-family: arial;
+    }
+  }
+}
+
+nav {
+  height: 38px;
+  border-bottom: 1px solid #ccc;
+  font: 14px/38px simsun;
+  padding-left: 5px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  a:last-of-type {
+    float: right;
+    height: 30px;
+    width: 60px;
+    border: 1px solid #ccc;
+    .rounded-corners();
+    margin-right: 8px;
+    margin-top: 4px;
+    text-align: center;
+    line-height: 30px;
+    background: -webkit-gradient(linear, 0 0, 0 80%, from(#d1d1d1), to(#eee));
+  }
+}
+
+.contain {
+  ul > li {
+    height: 121px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    a {
+      display: block;
+      div.img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-right: 8px;
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+      div.detail {
+        height: 100px;
+        p:first-of-type {
+          font-size: 14px;
+          color: #333;
+          height: 44px;
+          line-height: 22px;
+          overflow: hidden;
+        }
+        div.price {
+          margin-top: 6px;
+          b {
+            font: 600 16px "arial";
+            color: #ea3900;
+          }
+        }
+        p:last-of-type {
+          margin-top: 10px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+//5角星
+.star {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#cacaca' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+  display: inline-block;
+  width: 90px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.star1, .star2, .star3, .star4, .star5 {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.star1 {
+  width: 18px;
+}
+
+.star2 {
+  width: 35px;
+}
+
+.star3 {
+  width: 55px;
+}
+
+.star4 {
+  width: 70px;
+}
+
+.star5 {
+  width: 90px;
+}
+
+.page {
+  height: 34px;
+  margin-top: 20px;
+  text-align: center;
+  div {
+    float: left;
+  }
+  .prev, .next {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+      width: 82px;
+      height: 34px;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+      display: block;
+      line-height: 34px;
+      font-size: 14px;
+      .rounded-corners(4px);
+    }
+  }
+  .select {
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    select {
+      width: 95px;
+      height: 100%;
+    }
+  }
+}
+
+.brank {
+  text-align: center;
+  margin-top: 15px;
+  span {
+    font-size: 16px;
+    color: #000;
+  }
+}
+select{
+  outline: none;
+  border: none;
+  border: 1px solid #aaa;
+  /*清除不同浏览器添加给控件的样式*/
+}
+footer {
+  margin-top: 20px;
+  height: 94px;
+  background: #efefef;
+  .top {
+    height: 34px;
+    a {
+      float: left;
+      width: 30%;
+      height: 100%;
+      display: block;
+      border: 1px solid #ccc;
+      border-left: 0;
+      font-size: 14px;
+      line-height: 34px;
+      text-align: center;
+    }
+    a:last-of-type {
+      width: 40%;
+      border-right: 0;
+    }
+  }
+  .appdownload{
+    margin-top: 15px;
+    text-align: center;
+    a:first-of-type{
+      color: red;
+    }
+    a:last-of-type{
+      color: #000;
+    }
+    span,p{
+      color: #666;
+    }
+    p{
+      line-height: 18px;
+    }
+  }
+}

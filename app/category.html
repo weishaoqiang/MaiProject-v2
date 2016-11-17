@@ -1,0 +1,62 @@
+<!--甘庆学
+2016-11-6-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="style/commom.css"/>
+    <link rel="stylesheet/less" href="style/productlist.less"/>
+    <link rel="stylesheet/less" href="style/category.less"/>
+    <script src="lib/less.js"></script>
+</head>
+<body>
+<header>
+    <a href="index.html" title="慢慢买比价网--手机网"><img src="img/header_logo.png" alt="慢慢买比价网--手机网"/></a>
+    <a href="index.html"><img src="img/header_app.png" alt="手机app下载"/></a>
+</header>
+<div class="search">
+    <div class="searchtxt"><input type="text" placeholder="请输入你想比价的商品"/></div>
+    <div class="searchbtn"><input type="submit"value="搜索"/></div>
+</div>
+<div class="category">
+    <div class="ul">
+
+    </div>
+</div>
+<footer>
+    <div class="top">
+        <a href="javascript:;">登录</a>
+        <a href="">注册</a>
+        <a href=""><span></span>返回顶部</a>
+    </div>
+    <div class="appdownload">
+        <a href="">手机APP下载</a>
+        <a href="">慢慢买手机版</a>
+        <span> -- 掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<div class="app-promotion-bar"></div>
+</body>
+</html>
+<script src="lib/zepto.js"></script>
+<script src="lib/template-native.js"></script>
+<script src="js/category.js"> </script>
+<script src="lib/package.js"> </script>
+
+<!--get category title template-->
+<script type="text/temp" id="category_title">
+<%for(var i=0;i< result.length;i++){%>
+      <div class="li active"><a href="javascipt:;"><%=result[i].title%><span class="arrow1"></span></a></div>
+              <table class="category_tab none">
+              <tbody></tbody>
+              </table>
+       <%}%>
+</script>
+<!--getcategory content tempate-->
+<script type="text/temp" id="category_content">
+
+</script>

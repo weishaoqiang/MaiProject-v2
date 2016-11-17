@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>gsproduct</title>
+	<link rel="stylesheet" href="style/commom.css">
+	<link rel="stylesheet" href="style/gsproduct.css">
+	<script src='lib/zepto.js'></script>
+	<script src='lib/template-native.js'></script>
+	<script type='text/template' id="shop">
+		<% for (var i = 0; i < result.length; i++) { %>
+			<li class='<%=i==0?'on':''%>' data-shopId='<%=result[i]['shopId']%>'><%=result[i]['shopName']%></li>
+		<% } %>
+	</script>
+	<script type="text/template" id="area">
+		<% for (var i = 0; i < result.length; i++) { %>
+			<li class='<%=i==0?'on':''%>' data-areaId='<%=result[i]['areaId']%>'>
+				<%=result[i]['areaName']%>
+			</li>
+		<% } %>
+	</script>
+	<script type='text/template' id='product'>
+		<% for(var i=0;i< result.length;i++){ %>
+			<div class="product">
+				<a href="javascript:;">
+					<img src="<%=result[i]['productImg']%>" alt="">
+					<p><%=result[i]['productName']%></p>
+					<div>
+						<span class="left fl"><%=result[i]['productPrice']%></span>
+						<span class="right fr">去凑单</span>
+					</div>
+				</a>
+			</div>
+		<% } %>
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<a href="index.html"><span class="icon-font arrow_left">&#xe660;</span></a>
+			<h1>凑单品</h1>
+		</div>
+		<div class="nav">
+			<div class="filter">
+				<ul>
+					<li data-shopid='0'>
+						<a href="javascript:;">京东
+							<i></i>
+						</a>
+					</li>
+					<li data-areaid='0'>
+						<a href="javascript:;">华北
+							<i></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">1元
+							<i></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="search"><span class="icon-font icon-search">&#xe656;</span></div>
+			<div class="dropdown">
+				<div class="shop">
+					<ul></ul>
+				</div>
+				<div class="area">
+					<ul></ul>
+				</div>
+				<div class="price">
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+		<div class="main clearfix">
+
+		</div>
+	</div>
+	<script src='js/gsproduct.js'></script>
+</body>
+</html>

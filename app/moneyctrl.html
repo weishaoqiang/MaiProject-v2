@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>最新优惠 - 省钱控 - 慢慢买</title>
+    <link rel="stylesheet" href="style/getmoneyctrl.css"/>
+    <link rel="stylesheet" href="style/commom.css"/>
+    <link rel="stylesheet" href="fonts/iconfont.css"/>
+    <script src="lib/zepto.js"></script>
+    <script src="lib/package.js"></script>
+    <script src="lib/template-native.js"></script>
+    <script src="js/getmoneyctrl.js"></script>
+</head>
+<body>
+<!--数据模板-->
+<script type="text/template" id="moneyctrl">
+    <% for (var i=0;i< result.length;i++){ %>
+    <li>
+        <a href="discount.html?productid=<%= result[i].productId%>">
+            <div class="pic">
+                <%=#result[i].productImgSm %>
+            </div>
+            <div class="info">
+                <div class="title">
+                    <%=result[i].productName %>
+                    <span><%= result[i].productPinkage %></span>
+                </div>
+                <div class="other">
+                    <span class="mall"><%= result[i].productFrom %>
+                    <span class="productTime">|<%=result[i].productTime%></span>
+                    </span>
+                    <span class="content">
+                      <i class="icon-content"></i>
+                          <%= result[i].productComCount %>
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</script>
+<!--分页模板-->
+<script type="text/template" id="page">
+    <div class="prev">
+        <%if(pageid>1){%>
+        <a href="moneyctrl.html?pageid=<%=pageid-1%>">上一页</a>
+        <%}else{%>
+        <a onclick="alert('已经是第一页了!'); return false;" href="moneyctrl.html?pageid=1">上一页</a>
+        <%}%>
+    </div>
+    <div>
+        <select name="" id="sel"></select>
+    </div>
+    <div class="next">
+        <%if(pageid<14){%>
+        <a href="moneyctrl.html?pageid=<%=pageid-0+1==1?2:(pageid-0+1)%>">下一页</a>
+        <%}else{%>
+        <a onclick="alert('已经是最后一页了!'); return false;" href="moneyctrl.html?pageid=14">下一页</a>
+        <%}%>
+    </div>
+</script>
+<a name="top" id="top"></a>
+<!--头部布局-->
+<header>
+    <div class="overseas-return fl">
+        <a href="index.html" class="iconfont icon-return fl"></a>
+    </div>
+    <div class="overseas-app fr">
+        <a href=""></a>
+    </div>
+    <h1>省钱控-最新优惠</h1>
+</header>
+<!--主体布局-->
+<main>
+    <!-- 主体部分开始-->
+    <div class="container">
+        <div class="cu-list" id="cxdiv">
+            <ul>
+            </ul>
+        </div>
+        <div class="btn">
+
+        </div>
+    </div>
+</main>
+<div class="nav">
+    <a href="">首页</a>
+    &nbsp; >&nbsp;
+    省钱控
+</div>
+<!--导航布局-->
+<!--底部开始-->
+<footer>
+    <div class="login">
+        <a href="coupon-login.html">登陆</a>
+        <a href="coupon-register.html">注册</a>
+        <a href="#"><img width="13px" src="images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="copyright">
+        <a href="#">手机APP下载 </a>
+        <a href="#">慢慢买手机版 </a>
+        <span>-- 掌上比价平台</span>
+
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </div>
+</footer>
+</body>
+</html>

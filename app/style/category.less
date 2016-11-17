@@ -1,0 +1,66 @@
+//甘庆学
+//2016-11-6
+.category {
+  padding: 5px;
+  .ul {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #ebebeb;
+    .li {
+      height: 40px;
+      a {
+        display: block;
+        height: 40px;
+        padding-left: 15px;
+        font: 700 16px/40px arial;
+        color: #000;
+        border-bottom: 1px solid #ccc;
+        span {
+          width: 30px;
+          height: 7px;
+          margin-top: 17px;
+          float: right;
+          background: url("../img/arrow1.gif");
+        }
+        span.arrow1 {
+          background: url("../img/arrow1.gif");
+        }
+        span.arrow2 {
+          background: url("../img/arrow2.gif");
+        }
+      }
+    }
+    .li:last-of-type > a {
+      border: 0;
+    }
+  }
+  table.none{
+    display: none;
+  }
+  table.tab{
+    display: table;
+  }
+  table.category_tab{
+    width: 100%;
+    background: #fff;
+    border-bottom: 2px solid #888;
+      tr{
+        width: 33.3%;
+        td{
+          height: 40px;
+          width: 33.3%;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          text-align: center;
+          a{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+          }
+        }
+        td:nth-of-type(3n){
+          border-right: 0;
+        }
+      }
+  }
+}

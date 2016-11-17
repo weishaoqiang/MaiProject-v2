@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网-手机版</title>
+    <link rel="shortcut icon" href="http://m.manmanbuy.com/download/images/logo.png">
+    <link rel="stylesheet" href="style/commom.css">
+    <link rel="stylesheet" href="style/coupon.css">
+</head>
+<body>
+<!--header部分-->
+<header id="header-login">
+    <a class="header-left fl" href="index.html">
+        <img height="25px" style="" src="images/header_logo.png" alt=""/>
+    </a>
+    <a class="header-right fr" href="javascript:;" ></a>
+</header>
+
+<!--搜索框-->
+<div class="search-bar">
+    <input type="search" placeholder="请输入你想比较的商品" class="text fl">
+    <input type="button" value='搜索' class="btn fl">
+</div>
+<!--表单-->
+<form action="javascript:;">
+    <input type="text" placeholder="请输入用户名" class="userName" style="color: #666;font-size:12px">
+    <input type="text" class="passWord" placeholder="密码6-20个字符" style="color: #666;">
+    <input type="text" class="telNum" placeholder="请输入手机号" style="color: #666;">
+    <p>
+        <img src="img/CheckCode.gif" class="fl">
+        <input type="text">
+        <input type="button" value="获取手机验证码">
+    </p>
+    <input type="text" class="auto-code" placeholder="请输入手机验证码" style="color: #666;">
+    <input type="email" class="email" placeholder="请输入邮箱" style="color: #666;">
+    <input type="text" class="login" value="注册">
+</form>
+<!--脚部-->
+<div class="coupon-footer-top">
+    <a href="coupon-login.html" style="font-size:12px">登录</a>
+    <a href="javascript:;" style="font-size:12px">注册</a>
+    <a href="javascript:;" style="font-size:12px">
+        <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">
+        返回顶部
+    </a>
+</div>
+<div class="coupon-footer-bottom">
+    <p>
+        <a href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        <span>--掌上比价平台</span>
+    </p>
+    <p>http://m.manmanbuy.com/</p>
+</div>
+
+<!--弹出下载框-->
+<div class="app-tip">
+    <a class="close fl" href="javascript:;" id="close"></a>
+    <div class="app-icon fl">
+        <a href="javascript:;">
+            <img src="http://m.manmanbuy.com/download/images/logo.png">
+        </a>
+    </div>
+    <div class="tip-word fl">
+        <p class="manmanbuy">慢慢买</p>
+        <p>全网比价，省钱专家</p>
+    </div>
+    <a href="javascript:;" class="open fr">立即打开</a>
+</div>
+<script>
+    var close=document.getElementById('close');
+    var closesParent=close.parentNode;
+//    实现点击按钮关闭提示框
+    tap(close, function () {
+        closesParent.style.display='none';
+    })
+    function tap(demo, callback) {
+        var ismove = false;
+        var time;
+        demo.addEventListener('touchstart', function (e) {
+            time = Date.now();
+        })
+        demo.addEventListener('touchmove', function (e) {
+            ismove = true;
+        })
+        demo.addEventListener('touchend', function (e) {
+            if (ismove == false && (Date.now() - time) < 150) {
+                callback && callback(e);
+            }
+            ismove = false;
+        })
+    }
+</script>
+</body>
+</html>
